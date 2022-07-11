@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    </head>
+    <body>
+<!--REST: Hypertext Transfer Protocol --HTTP: doesn't 
+    define how an application should be architected; this 
+    means HTTP is used, and applications are designed 
+    inconsitently across different companies; Roy Fielding: 
+    Representational State Transfer: REST is not a protocol
+    or HTTP, but it is the way we should use HTTP to 
+    create an application, and it focuses on transferring 
+    the state of a resource from one machine to another: from
+    a front end application to a back end application sending 
+    the state that represents the resource at that given moment
+    in time from one machine to another; when we transfer the 
+    state of a resource, we have multiple choices to represent
+    the state: plain text, xml, json, or something else;
+
+    JSON: JavaScript Object Notation: preferred way for most 
+    developers to transfer the state of a resource: key-value
+    pairs where properties of a resource have values assigned
+    that represent the state of that entity at a given point 
+    in time; -->
+
+    {
+        account number: "09986345",
+        balance: 670.34, 
+        acocuntType: "checking"
+    } <!--this is the representation of the state of an 
+    account resource at a specific time; the state will 
+    always be changing; fronteend can send new state to 
+    the backend or the backend could update and send the 
+    new state to the backend -->
+
+    <!--HTTP: Create - Post, Read - Get, Update - Update
+    Delete - Delete; when we send a post request we expect
+    a resource to be created; get will read a resource, update
+    will update the resource, and delete will delete the 
+    resource; get requests are typically requests for data and
+    don't require a payload; payload is a text - typically 
+    JSON - describing what we want the request to do; 
+    post and update will have payloads that tell what to 
+    create; update would tell what needs to be updated;
+    a delete typically doesn't need a payload -->
+
+    <!--Fetch: allows us to send an HTTP request and returns
+    a promise that we handle based on the response data; built
+in as part of JS as the global window object and we call it 
+virtually anywhere from within a browser; Fetch takes one or two parameters: the url to 
+send an HTTP request to; the second is an object used to 
+initialize further details about that request: request body(
+data we send in a request), a specific verb method, content type,
+etc.   -->
+    </body>
+</html>
